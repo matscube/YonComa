@@ -1,0 +1,39 @@
+<h1>Listing documents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Contents</th>
+      <th>Sent1</th>
+      <th>Sent2</th>
+      <th>Sent3</th>
+      <th>Sent4</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.title %></td>
+        <td><%= document.date %></td>
+        <td><%= document.contents %></td>
+        <td><%= document.sent1 %></td>
+        <td><%= document.sent2 %></td>
+        <td><%= document.sent3 %></td>
+        <td><%= document.sent4 %></td>
+        <td><%= link_to 'Show', document %></td>
+        <td><%= link_to 'Edit', edit_document_path(document) %></td>
+        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Document', new_document_path %>

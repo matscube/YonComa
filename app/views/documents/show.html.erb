@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @document.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @document.date %>
+</p>
+
+<p>
+  <strong>Contents:</strong>
+  <%= @document.contents %>
+</p>
+
+<p>
+  <strong>Sent1:</strong>
+  <%= @document.sent1 %>
+</p>
+
+<p>
+  <strong>Sent2:</strong>
+  <%= @document.sent2 %>
+</p>
+
+<p>
+  <strong>Sent3:</strong>
+  <%= @document.sent3 %>
+</p>
+
+<p>
+  <strong>Sent4:</strong>
+  <%= @document.sent4 %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>
